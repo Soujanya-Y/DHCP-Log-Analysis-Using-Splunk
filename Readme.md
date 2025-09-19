@@ -63,7 +63,7 @@ source="dhcp.log" host="SoujanyaPC" sourcetype="dhcp"
 | table readable_time, session_id, src_ip, src_port, dst_ip, dst_port, mac_address, assigned_ip, lease_duration, transaction_id
 
 ```
-
+[Dhcp_Field_Extraction](Dhcp_Field_Extraction.png)
 ### 3. Analyze Email Traffic Patterns
 - Determine the distribution of IP address assignments:
 ```
@@ -72,6 +72,7 @@ source="dhcp.log" host="SoujanyaPC" sourcetype="dhcp"
 | stats count as assignment_count by assigned_ip
 | sort - assignment_count
 ```
+[Dhcp_Ip_Assignment](Dhcp_Ip_Assignment.png)
 ### 4. Detect Anomalies
 - Look for unusual patterns in IP address assignments:
 ```
